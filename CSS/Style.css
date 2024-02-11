@@ -63,7 +63,7 @@ body h1 {
   border: none;
   outline: none;
   background-color: transparent;
-  color: rgb(93, 92, 92);
+  color: #53f5af;
   font-size: 18px;
 }
 .dict_container_detail {
@@ -100,4 +100,12 @@ footer {
   top: 95%;
   left: 50%;
   z-index: -1;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+  .dict_container {
+    width: 90%;
+    /* Adjusted width for smaller screens */
+  }
 }/*# sourceMappingURL=Style.css.map */
