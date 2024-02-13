@@ -41,7 +41,7 @@ dataFetch = () => {
             sound.setAttribute("src", `https:${item[0].phonetics[0].audio}`)
         })
         .catch(() => {
-            result.innerHTML = `< h3 class="error" > oops! Word is not found 😦</h3 > `
+            result.innerHTML = `<h3 class="error"> oops! Word is not found 😦</h3 > `
         })
 
 }
