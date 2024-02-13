@@ -103,8 +103,20 @@ footer {
 }
 
 /* Media Query for Mobile Devices */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 458px) {
   .dict_container {
     width: 90%;
+    font-size: 15px;
+    overflow: auto;
+  }
+  .dict_container_search {
+    display: block;
+  }
+  .dict_container_search_inp {
+    width: 100%;
+  }
+  .dict_container_search_btn {
+    margin-top: 20px;
+    width: 100%;
   }
 }/*# sourceMappingURL=Style.css.map */

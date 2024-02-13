@@ -35,7 +35,7 @@ dataFetch = () => {
                   <p style="color:grey">${synonyms || 'Not found'} </p>
 
     <div class="dict_container_example">
-        ${item[0].meanings[0].definitions[0].example || '', console.log(item[0].phonetics[0].audio)
+        ${item[0].meanings[0].definitions[0].example || '', console.log(item[0].phonetics[0])
                 }
     </div > `
             sound.setAttribute("src", `${item[0].phonetics[0].audio}`)
@@ -57,3 +57,4 @@ btn.addEventListener("click", () => {
 function soundPlay() {
     sound.play();
 }
+soundPlay()
