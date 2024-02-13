@@ -16,7 +16,7 @@ dataFetch = () => {
             result.innerHTML = `<div class="dict_container_word">
                 <h3>${word}</h3>
 
-                <button type="button" onClick="soundPlay()" ><i class="fa-solid fa-volume-high"></i></button>
+                <button type="button" onclick="soundPlay()" ><i class="fa-solid fa-volume-high" onclick="soundPlay()"></i></button>
             </div>
 
             <div class="dict_container_detail">
@@ -35,10 +35,10 @@ dataFetch = () => {
                   <p style="color:grey">${synonyms || 'Not found'} </p>
 
     <div class="dict_container_example">
-        ${item[0].meanings[0].definitions[0].example || ''
+        ${item[0].meanings[0].definitions[0].example || '', console.log(item[0].phonetics[0].audio)
                 }
     </div > `
-            sound.setAttribute("src", `https:${item[0].phonetics[0].audio}`)
+            sound.setAttribute("src", `${item[0].phonetics[0].audio}`)
         })
         .catch(() => {
             result.innerHTML = `<h3 class="error"> oops! Word is not found 😦</h3 > `
@@ -55,5 +55,5 @@ btn.addEventListener("click", () => {
 })
 
 function soundPlay() {
-    sound.play()
+    sound.play();
 }
